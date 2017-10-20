@@ -92,6 +92,7 @@ class Reporter
     @reporter = new @mocha._reporter(@runner, {reporterOptions: @reporterOptions})
 
     @runner.ignoreLeaks = true
+    @runner.slow = 5000;
 
   _createRunnable: (runnableProps, type, parent) ->
     runnable = switch type
